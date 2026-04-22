@@ -35,7 +35,7 @@ program to your modern proxy without installing any other programs.`,
 				fmt.Println(`No command is given, you can try:
 $ gg --help
 or
-$ gg git clone https://github.com/mzz2017/gg.git`)
+$ gg git clone https://github.com/qi-mooo/gg.git`)
 				return
 			}
 

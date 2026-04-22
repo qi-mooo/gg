@@ -34,7 +34,7 @@ Compared to proxychains or graftcp, we have the following advantages:
 1. Run this command to download the latest release of go-graft:
 
     ```bash
-    sudo sh -c "$(curl -L https://github.com/mzz2017/gg/raw/main/release/go.sh)"
+    sudo sh -c "$(curl -L https://raw.githubusercontent.com/qi-mooo/gg/main/release/go.sh)"
     ```
 
    > Without `sudo`, gg will be installed to the user directory.
@@ -344,4 +344,3 @@ complete -c gg -x -a "(__fish_complete_gg_subcommand)"
 - [ ] Surge
 - [ ] Quantumult
 - [ ] Quantumult X
-

@@ -2,6 +2,8 @@
 
 YELLOW="$(tput setaf 3 2>/dev/null || printf '')"
 NO_COLOR="$(tput sgr0 2>/dev/null || printf '')"
+REPO="${GG_REPO:-qi-mooo/gg}"
+RELEASE_BASE="https://github.com/${REPO}/releases/latest/download"
 
 warn() {
   printf '%s\n' "${YELLOW}! $*${NO_COLOR}"
@@ -76,7 +78,7 @@ download_and_install() {
 
   temp_file=$(mktemp /tmp/gg.XXXXXXXXX)
   trap "rm -f '$temp_file'" exit
-  curl -L "https://github.com/mzz2017/gg/releases/latest/download/gg-${PLATFORM}-${ARCH}" -o "${temp_file}"
+  curl -L "${RELEASE_BASE}/gg-${PLATFORM}-${ARCH}" -o "${temp_file}"
   all_user_access=0
   touch /usr/local/bin/gg > /dev/null 2>&1 && all_user_access=1
   if [ "$all_user_access" = 1 ]; then
@@ -121,4 +123,3 @@ check_command() {
 
 download_and_install
 check_command
-
