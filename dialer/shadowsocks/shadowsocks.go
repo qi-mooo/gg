@@ -52,6 +52,17 @@ func NewShadowsocksFromClashObj(o *yaml.Node, opt *dialer.GlobalOption) (*dialer
 }
 
 func (s *Shadowsocks) Dialer() (*dialer.Dialer, error) {
+	if isShadowsocks2022Cipher(s.Cipher) {
+		d, err := newShadowsocks2022ProxyDialer(s)
+		if err != nil {
+			return nil, err
+		}
+		return dialer.NewDialer(d, s.UDP, s.Name, s.Protocol, s.ExportToURL()), nil
+	}
+	return s.classicDialer()
+}
+
+func (s *Shadowsocks) classicDialer() (*dialer.Dialer, error) {
 	// FIXME: support plain/none.
 	switch s.Cipher {
 	case "aes-256-gcm", "aes-128-gcm", "chacha20-poly1305", "chacha20-ietf-poly1305":

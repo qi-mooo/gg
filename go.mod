@@ -1,10 +1,11 @@
 module github.com/mzz2017/gg
 
-go 1.18
+go 1.23.0
 
 require (
 	github.com/1lann/promptui v0.0.0-20201231203810-3d80f6bc68f3
 	github.com/AlecAivazis/survey/v2 v2.3.2
+	github.com/database64128/shadowsocks-go v1.5.2
 	github.com/fatih/structs v1.1.0
 	github.com/gorilla/websocket v1.4.2
 	github.com/json-iterator/go v1.1.12
@@ -15,14 +16,16 @@ require (
 	github.com/spf13/cobra v1.2.1
 	github.com/spf13/viper v1.9.0
 	github.com/v2rayA/shadowsocksR v1.0.4
-	golang.org/x/net v0.0.0-20220926192436-02166a98028e
-	golang.org/x/sys v0.0.0-20220728004956-3c1f35247d10
-	golang.org/x/tools v0.1.5
-	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b
+	golang.org/x/net v0.40.0
+	golang.org/x/sys v0.33.0
+	golang.org/x/tools v0.21.1-0.20240508182429-e35e4ccd0d2d
+	gopkg.in/yaml.v3 v3.0.1
 )
 
 require (
 	github.com/chzyer/readline v0.0.0-20180603132655-2972be24d48e // indirect
+	github.com/database64128/netx-go v0.1.0 // indirect
+	github.com/database64128/tfo-go/v2 v2.2.2 // indirect
 	github.com/dgryski/go-camellia v0.0.0-20191119043421-69a8a13fb23d // indirect
 	github.com/dgryski/go-idea v0.0.0-20170306091226-d2fb45a411fb // indirect
 	github.com/dgryski/go-metro v0.0.0-20200812162917-85c65e2d0165 // indirect
@@ -35,6 +38,7 @@ require (
 	github.com/inconshreveable/mousetrap v1.0.0 // indirect
 	github.com/juju/ansiterm v0.0.0-20180109212912-720a0952cc2a // indirect
 	github.com/kballard/go-shellquote v0.0.0-20180428030007-95032a82bc51 // indirect
+	github.com/klauspost/cpuid/v2 v2.2.10 // indirect
 	github.com/lunixbochs/vtclean v0.0.0-20180621232353-2d01aacdc34a // indirect
 	github.com/magiconair/properties v1.8.5 // indirect
 	github.com/mattn/go-colorable v0.1.6 // indirect
@@ -51,14 +55,17 @@ require (
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/subosito/gotenv v1.2.0 // indirect
 	gitlab.com/yawning/chacha20.git v0.0.0-20190903091407-6d1cb28dc72c // indirect
-	golang.org/x/crypto v0.0.0-20220926161630-eccd6366d1be // indirect
-	golang.org/x/term v0.0.0-20210927222741-03fcf44c2211 // indirect
-	golang.org/x/text v0.3.7 // indirect
+	go.uber.org/multierr v1.11.0 // indirect
+	go.uber.org/zap v1.27.0 // indirect
+	golang.org/x/crypto v0.38.0 // indirect
+	golang.org/x/term v0.32.0 // indirect
+	golang.org/x/text v0.25.0 // indirect
 	google.golang.org/genproto v0.0.0-20210828152312-66f60bf46e71 // indirect
 	google.golang.org/grpc v1.49.0 // indirect
 	google.golang.org/protobuf v1.27.1 // indirect
 	gopkg.in/ini.v1 v1.63.2 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
+	lukechampine.com/blake3 v1.4.1 // indirect
 )
 
 replace (
